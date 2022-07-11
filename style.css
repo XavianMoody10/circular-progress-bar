@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+svg {
+  transform: rotate(270deg);
+  margin: 20px;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  fill: white;
+  stroke: white;
+  stroke-width: 15px;
+  /* Chop the stroke base on what ever length is given  */
+  /* Have to get the lenght of the circle div */
+  stroke-dasharray: 627.303466796875;
+
+  /* Length it takes to get around the circle or shape */
+  stroke-dashoffset: 0;
+
+  animation-name: progress;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes progress {
+  from {
+    stroke: white;
+    stroke-dashoffset: 627.303466796875;
+  }
+
+  to {
+    stroke: black;
+    stroke-dashoffset: 0;
+  }
+}
